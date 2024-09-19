@@ -1,0 +1,30 @@
+-- Inventory Table
+CREATE TABLE Inventory (
+    item_id INTEGER PRIMARY KEY,
+    category TEXT NOT NULL, -- Deep Fry, Cooking, Accessories, Dry, Vegetables
+    item_name TEXT NOT NULL,
+    quantity INTEGER NOT NULL,
+    unit TEXT, -- e.g., kg, liters, units
+    price_per_unit REAL,
+    supplier TEXT,
+    last_updated DATE
+);
+-- Insert Deep Fry Item
+INSERT INTO Inventory (category, item_name, quantity, unit, price_per_unit, supplier, last_updated)
+VALUES ('Deep Fry', 'French Fries', 100, 'kg', 2.5, 'Supplier A', DATE('now'));
+
+-- Insert Cooking Item
+INSERT INTO Inventory (category, item_name, quantity, unit, price_per_unit, supplier, last_updated)
+VALUES ('Cooking', 'Olive Oil', 50, 'liters', 7.0, 'Supplier B', DATE('now'));
+
+-- Insert Accessory
+INSERT INTO Inventory (category, item_name, quantity, unit, price_per_unit, supplier, last_updated)
+VALUES ('Accessories', 'Spatula', 30, 'units', 1.5, 'Supplier C', DATE('now'));
+
+-- Insert Dry Item
+INSERT INTO Inventory (category, item_name, quantity, unit, price_per_unit, supplier, last_updated)
+VALUES ('Dry', 'Flour', 200, 'kg', 1.0, 'Supplier D', DATE('now'));
+
+-- Insert Vegetable Item
+INSERT INTO Inventory (category, item_name, quantity, unit, price_per_unit, supplier, last_updated)
+VALUES ('Vegetables', 'Tomatoes', 150, 'kg', 2.0, 'Supplier E', DATE('now'));
